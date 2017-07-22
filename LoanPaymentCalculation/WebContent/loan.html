@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+<title>Loan Details</title>
+<link rel="stylesheet" href="bootstrap.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<main class="container">
+		<div class="col-md-6 col-md-offset-3">
+			<form action="/LoanPaymentCalculation/LoanServlet" method="POST" class="form">
+				<h3 class="text-center">Compute Loan Payment</h3>
+				<label for="loanAmount" class="control-label">Loan Amount: </label>
+				<input type="number" step=".01" min="0" class="form-control" name="loanAmount">
+				<label for="interest" class="control-label">Annual Interest Rate: </label>
+				<input type="number" step=".01" min="0" class="form-control" name="interest">
+				<label for="numYears" class="control-label">Number of Years: </label>
+				<input type="number" step="1" min="1" class="form-control" name="numYears">
+				<hr>
+				<input type="submit" class="form-control btn btn-primary" value="Compute Loan Payment">
+				<input type="reset" class="form-control btn btn-info" value="Reset">
+			</form>
+		</div>
+	</main>
+</body>
+</html>
